@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Trama: Credimatic</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container-out-info">
+            <button class="btn-generate" onclick="new Generator().print()"> Generar Trama</button>
+            <div class="out-message">
+                <textarea class="txt-trama" name="" id="trama" cols="30" rows="1"></textarea>
+            </div>
+            <button id="copy-trama" onclick="new Generator().copy()">Copiar</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container-input-info">
+            <div class="container-input-info-column">
+                <div class="txt-input">
+                    1. Código de Formato (2 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" maxlength="2" type="text" name="categoria" id="codigo-formato" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-formato" onclick="">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    2. Código de Mensaje (4 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" maxlength="4" type="text" name="categoria" id="codigo-de-mensaje" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-mensaje">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    3. PAN (2 - 19 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" minlength="2" maxlength="19" type="text" name="categoria" id="pan" placeholder="Pan">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-pan">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    4. Código de proceso (6 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" maxlength="6" type="text" name="categoria" id="codigo-de-proceso" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-proceso">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    5. Importe de la transacción (12 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" type="text" maxlength="12" name="categoria" id="importe-de-la-transaccion" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-importe-de-la-transaccion">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    6. Importe en la moneda de conciliacion con la red (12 op)
+                    <div class="container-txt-input-button">
+                       <input class="" value="" type="text" maxlength="12" name="categoria" id="importe-en-la-moneda-de-conciliacion-con-la-red" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-importe-en-la-moneda-de-conciliacion-con-la-red">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    7. Fecha y hora de la transaccion (14 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="14" name="categoria" id="fecha-y-hora-de-la-transaccion" placeholder="AAAAMMDDhhmmss">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-fecha-y-hora-de-la-transaccion">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    8. Identificador del mensaje (19 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="19" name="categoria" id="identificador-del-mensaje" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-identificador-del-mensaje">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    9. Fecha de caducidad (4 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="4" name="categoria" id="fecha-de-caducidad" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-fecha-de-caducidad">Aleatoreo</button>
+                    </div>
+                </div>
+                <div class="txt-input">
+                    10. Codigo de actividad (4 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="4" name="categoria" id="codigo-de-actividad" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-actividad">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    11. Codigo de país (3 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="3" name="categoria" id="codigo-de-pais" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-pais" onclick="">Aleatoreo</button>
+                    </div>    
+                </div>
+            </div>
+            <div class="container-input-info-column">
+                <div class="txt-input">
+                    12. Modo de entrada de los datos (12 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="12" name="categoria" id="modo-de-entrada-de-los-datos" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-modo-de-entrada-de-los-datos">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    13. Código de actividad original (4 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="4" name="categoria" id="codigo-de-actividad-original" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-actividad-original">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    14. Sesion switch (7 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="7" name="categoria" id="sesion-switch" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-sesion-switch">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    15. Sesion origen (12 op)
+                    <div class="container-txt-input-button">
+                        <input class="" type="text" maxlength="12" name="categoria" id="sesion-origen" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-sesion-origen">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    16. Importe de tasas (12 op)
+                    <div class="container-txt-input-button">
+                       <input class="" value="" type="text" maxlength="12" name="categoria" id="importe-de-tasas" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-importe-de-tasas">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    17. Código de moneda de las tasas (3 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="3" name="categoria" id="codigo-de-moneda-de-las-tasas" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-moneda-de-las-tasas">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    18. Código identificador adquirente (11 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="11" name="categoria" id="codigo-identificador-adquirente" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-identificador-adquirente">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    19. Código de la red o elemento switch que envio el mensaje (11 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="11" name="categoria" id="codigo-de-la-red-o-elemento-switch-que-envio-el-mensaje" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-la-red-o-elemento-switch-que-envio-el-mensaje">Aleatoreo</button>
+                    </div>
+                </div>
+                <div class="txt-input">
+                    20. Código de la entidad autorizadora (11 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="11" name="categoria" id="codigo-de-la-entidad-autorizadora" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-la-entidad-autorizadora">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    21. Referencia de la operacion (12 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="12" name="categoria" id="referencia-de-la-operacion" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-referencia-de-la-operacion" onclick="">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    22. Código de autorización (6 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="6" name="categoria" id="codigo-de-autorizacion" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-autorización">Aleatoreo</button>
+                    </div>    
+                </div>
+            </div>
+            <div class="container-input-info-column">
+                <div class="txt-input">
+                    23. Código de respuesta (3 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="3" name="categoria" id="codigo-de-respuesta" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-respuesta">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    24. Identificador del terminal (8 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="8" name="categoria" id="identificador-del-terminal" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-identificador-del-terminal">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    25. Código identificador del comercio (15 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" type="text" maxlength="15" name="categoria" id="codigo-identificador-del-comercio" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-identificador-del-comercio">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    26. Nombre y dirección del comercio (50 op)
+                    <div class="container-txt-input-button">
+                       <input class="" value="" type="text" maxlength="50" name="categoria" id="nombre-y-dirección-del-comercio" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-nombre-y-dirección-del-comercio">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    27. Datos adicionales (538 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="538" name="categoria" id="datos-adicionales" placeholder="LII-An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-datos-adicionales">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    28. Código de moneda (3 ob)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="3" name="categoria" id="codigo-de-moneda" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-moneda">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    29. Código de moneda original a la transaccion (3 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="3" name="categoria" id="codigo-de-moneda-original-a-la-transaccion" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-moneda-original-a-la-transaccion">Aleatoreo</button>
+                    </div>
+                </div>
+                <div class="txt-input">
+                    30. Código de moneda de conciliación (3 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="3" name="categoria" id="codigo-de-moneda-de-conciliacion" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-codigo-de-moneda-de-conciliacion">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    31. Datos EMV (300 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="300" name="categoria" id="datos-emv" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-datos-emv" onclick="">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    32. Datos de la operacion original (30 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="30" name="categoria" id="datos-de-la-operacion-original" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-datos-de-la-operacion-original">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    33. Datos privados del origen (40 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="40" name="categoria" id="datos-privados-del-origen" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-datos-privados-del-origen">Aleatoreo</button>
+                    </div>    
+                </div>
+            </div>
+            <div class="container-input-info-column">
+                <div class="txt-input">
+                    34. Fecha contable (8 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="8" name="categoria" id="fecha-contable" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-fecha-contable">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    35. Forma de pago (2 op)
+                    <div class="container-txt-input-button">
+                        <input class="" type="text" maxlength="2" name="categoria" id="forma-de-pago" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-forma-de-pago">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    36. Numero de referencia de la linea (8 op)
+                    <div class="container-txt-input-button">
+                       <input class="" value="" type="text" maxlength="8" name="categoria" id="numero-de-referencia-de-la-linea" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-numero-de-referencia-de-la-linea">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    37. Impuesto (12 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="12" name="categoria" id="impuesto" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-impuesto">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    38. Propina (12 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="12" name="categoria" id="propina" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-propina">Aleatoreo</button>
+                    </div>
+                </div>
+                <div class="txt-input">
+                    39. Comision (12 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="12" name="categoria" id="comision" placeholder="N">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-comision">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    40. Tipo de linea (4 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="4" name="categoria" id="tipo-de-linea" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-tipo-de-linea">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    41. MAC (8 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="8" name="categoria" id="mac" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-mac">Aleatoreo</button>
+                    </div>    
+                </div>
+                <div class="txt-input">
+                    42. Datos token (38 op)
+                    <div class="container-txt-input-button">
+                        <input class="" value="" type="text" maxlength="38" name="categoria" id="datos-token" placeholder="An">
+                        <button class="btn-aleatoreo" type="submit" id="aleatoreo-datos-token">Aleatoreo</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        
+    </footer>
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

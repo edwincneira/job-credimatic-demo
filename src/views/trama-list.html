@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Trama: Credimatic</title>
+</head>
+<body>
+    <header class="header">
+        <h1>
+            Generar Lista de Tramas
+        </h1>
+    </header>
+    <div class="container">
+        <div class="container-out-info-list">
+            <div class="container-menu-list">
+                Id inicial de la transacción
+                <input type="number" name="" id="inicio-id">
+                Numero de transacción
+                <input type="number" name="" id="limite-transacciones">
+                <button class="btn-generate" onclick="new Generator().printList()"> Generar Lista de Tramas</button>
+                <button id="copy-trama" onclick="new Generator().copy()">Copiar</button>
+            </div>
+            <div class="container-interact-output">
+                <div class="out-message">
+                    <textarea class="txt-trama" name="" id="trama" cols="100" rows="30"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        
+    </footer>
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

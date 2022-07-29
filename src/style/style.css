@@ -6,6 +6,7 @@
 
 body {
 	display: column;
+    height: 100vh;
 } 
 
 .header {
@@ -17,7 +18,41 @@ body {
 }
 
 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+}
+
+.container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8%;
+    height: 60%;
+}
+
+.container-interfaz-switch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    width: 50%;
+    height: 30%;
+}
+
+.container-interfaz-switch a button {
+    margin-bottom: 2px;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+}
+
+.name-interfaz-1 {
+    margin-bottom: 10px;
 }
 
 .container-input-info {
@@ -70,4 +105,24 @@ body {
     margin-right: 10%;
     margin-left: 10%;
     width: 120px;
+}
+
+.container-out-info-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.container-menu-list input button {
+    margin-bottom: 5px;
+}
+
+.container-interact-output {
+
 }
